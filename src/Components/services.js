@@ -467,6 +467,7 @@ const Services = () => {
   return (
 
     <div
+    id="services"
     style={{
       width: "100%",
         maxWidth: "1200px",
@@ -479,7 +480,7 @@ const Services = () => {
 
     }}>
     <div
-      id="services"
+      
       style={{
         width: "100%",
         maxWidth: "850px",

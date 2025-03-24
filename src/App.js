@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import HeroSection from "./Components/header";
+import AboutUs from "./Components/aboutus";
+import Services from "./Components/services";
+import ProjectsPage from "./Components/ProjectsPages";
+import CompanyProducts from "./Components/products";
+import Footer from "./Components/footer";
+import ProjectCards from "./Components/projects";
+import WhyChoose from "./Components/whyChoose";
+import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      {/* Main route to display HeroSection, AboutUs, and other components */}
+      <Route
+        path="/"
+        element={
+          <>
+            <HeroSection />
+            <AboutUs />
+            <Services />
+            <ProjectCards /> {/* Now part of Routes */}
+            <WhyChoose />
+            <CompanyProducts />
+            <ContactUs></ContactUs>
+            <Footer />
+          </>
+        }
+      />
+      
+      {/* Route for the ProjectsPage */}
+      <Route path="/projects" element={<ProjectsPage />} />
+    </Routes>
   );
 }
 

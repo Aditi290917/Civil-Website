@@ -51,6 +51,7 @@ const ContactUs = () => {
       <div
         style={{
           display: "flex",
+          flexWrap: "wrap",
           maxWidth: "1200px",
           margin: "0 auto",
           backgroundColor: "#eaeaea",
@@ -59,7 +60,13 @@ const ContactUs = () => {
         }}
       >
         {/* Left Section: Contact Form */}
-        <div style={{ flex: 1, padding: "40px" }}>
+        <div
+          style={{
+            flex: "1",
+            padding: "40px",
+            minWidth: "300px",
+          }}
+        >
           <h2 style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: "20px" }}>Online Inquiry</h2>
           {successMessage && (
             <Alert
@@ -136,24 +143,36 @@ const ContactUs = () => {
         {/* Right Section: Contact Details */}
         <div
           style={{
-            flex: 1,
+            flex: "1",
             padding: "40px",
             backgroundColor: "#eaeaea",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            minWidth: "300px",
           }}
         >
-          <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "40px" }}>Contact Details</h2>
-          <p style={{ fontSize: "1.2rem", marginBottom: "10px" }}>
-            <strong>Email:</strong> contact@example.com
-          </p>
-          <p style={{ fontSize: "1.2rem", marginBottom: "10px" }}>
-            <strong>Phone:</strong> +1 800 123 8979
-          </p>
-          <p style={{ fontSize: "1.2rem", marginBottom: "10px" }}>
-            <strong>Address:</strong> Mobile Center, 8th Floor, 379 Hudson St, New York, NY 10018 US
-          </p>
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "20px" }}>Contact Details</h2>
+          <div style={{ marginBottom: "20px" }}>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "10px" }}>Pune Address</h3>
+            <p style={{ fontSize: "1.2rem" }}>
+              6/b, Near Talathi Office, Ghandhi Chowk, Hadapsar, Pune-411028
+            </p>
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "10px" }}>Karad Address</h3>
+            <p style={{ fontSize: "1.2rem" }}>
+              Ground Floor Of Lokmanya Bank, Krishna Naka, Karad-415110
+            </p>
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <p style={{ fontSize: "1.2rem" }}>
+              <strong>Mobile:</strong> 9371507666, 7767977177
+            </p>
+            <p style={{ fontSize: "1.2rem" }}>
+              <strong>Email:</strong> Strucproof666@gmail.com
+            </p>
+          </div>
         </div>
       </div>
     </div>

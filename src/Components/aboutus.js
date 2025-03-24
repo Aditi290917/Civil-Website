@@ -6,28 +6,42 @@ const AboutUs = () => {
       id="about"
       style={{
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
         alignItems: "center",
+        justifyContent: "center",
         padding: "50px 20px",
         backgroundColor: "#ffffff",
-        textAlign: "center",
+        textAlign: "left",
+        gap: "20px",
       }}
     >
-      {/* Heading */}
-      <div
-        style={{
-          fontSize: "2rem",
-          fontWeight: "bold",
-          marginBottom: "20px",
-          color: "#0066cc",
-          textTransform: "uppercase",
-        }}
-      >
-        About Us
+      {/* Image */}
+      <div style={{ flex: 1, textAlign: "center" }}>
+        <img
+          src="aboutus.jpg"
+          alt="About Us"
+          style={{
+            maxWidth: "70%",
+            maxHeight: "70rem",
+            borderRadius: "8px",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div style={{ maxWidth: "800px" }}>
+      <div style={{ flex: 1 }}>
+        <div
+          style={{
+            fontSize: "2rem",
+            fontWeight: "bold",
+            marginBottom: "20px",
+            color: "#0066cc",
+            textTransform: "uppercase",
+          }}
+        >
+          About Us
+        </div>
         <p
           style={{
             fontSize: "1.2rem",
@@ -37,10 +51,10 @@ const AboutUs = () => {
           }}
         >
           Welcome to <strong>StrucProof</strong>, your trusted partner in
-          building waterproofing solutions. We specialize in providing top-notch
-          services to protect your structures from water damage. Our team of
-          experts uses cutting-edge technology to ensure your buildings remain
-          safe, secure, and dry.
+          building waterproofing solutions. We specialize in providing
+          top-notch services to protect your structures from water damage. Our
+          team of experts uses cutting-edge technology to ensure your buildings
+          remain safe, secure, and dry.
         </p>
         <p
           style={{
@@ -55,9 +69,6 @@ const AboutUs = () => {
           be the go-to waterproofing experts in the industry.
         </p>
       </div>
-
-      {/* Image */}
-      
     </section>
   );
 };

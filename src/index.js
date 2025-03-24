@@ -3,26 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import HeroSection from './Components/header';
-import AboutUs from './Components/aboutus';
-import Services from './Components/services';
-import WhyChooseUs from './Components/whyChooseUs';
-import CompanyProducts from './Components/products';
-import Footer from './Components/footer';
-import ContactUs from './Components/ContactUs';
-import ProjectCards from './Components/projects';
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<HeroSection></HeroSection>
-<AboutUs></AboutUs>
-<Services></Services>
-<ProjectCards></ProjectCards>
-<WhyChooseUs></WhyChooseUs>
-<CompanyProducts></CompanyProducts>
-<ContactUs></ContactUs>
-<Footer></Footer>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

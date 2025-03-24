@@ -1,8 +1,8 @@
 import React from "react";
 import { Row, Col, Container } from "reactstrap";
-import { FaUsers, FaTools, FaTag, FaHeadset } from "react-icons/fa";
+import { FaUsers, FaTools, FaTag, FaHeadset, FaShieldAlt } from "react-icons/fa";
 
-const WhyChooseUs = () => {
+const WhyChoose = () => {
   const cards = [
     {
       title: "Experienced & Skilled Team",
@@ -32,6 +32,13 @@ const WhyChooseUs = () => {
       icon: <FaHeadset />,
       backgroundColor: "#17a2b8",
     },
+    {
+      title: "10 Years Warranty",
+      description:
+        "We offer a 10-year warranty to ensure peace of mind and long-term reliability.",
+      icon: <FaShieldAlt />,
+      backgroundColor: "#6f42c1",
+    },
   ];
 
   return (
@@ -53,7 +60,8 @@ const WhyChooseUs = () => {
         >
           Why Choose Us
         </h2>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center"
+        style={{ gap: "2rem" }}>
           {cards.map((item, index) => (
             <Col
               lg="3"
@@ -131,4 +139,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default WhyChoose;

@@ -305,6 +305,8 @@
 // };
 
 // export default HeroSection;
+
+
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -354,6 +356,10 @@ const HeroSection = () => {
     "HeroImage3.jpg",
     "HeroImage4.jpg",
     "HeroImage5.jpg",
+    "HeroImage6.jpg",
+    "HeroImage7.jpg",
+    "HeroImage8.jpg",
+
   ];
 
   const sliderSettings = {
@@ -377,7 +383,7 @@ const HeroSection = () => {
           top: 0,
           width: "100%",
           zIndex: 1000,
-          backgroundColor: isScrolled ? "white" : "rgba(0, 0, 0, 0.1)",
+          backgroundColor: isScrolled ? "white" : "rgba(117, 116, 116, 0.1)",
           transition: "background-color 0.3s ease-in-out",
           boxShadow: isScrolled ? "0 4px 10px rgba(0, 0, 0, 0.1)" : "none",
         }}
@@ -443,6 +449,17 @@ const HeroSection = () => {
                 }}
               >
                 Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                style={{
+                  color: isScrolled ? "black" : "white",
+                  textDecoration: "none",
+                }}
+              >
+                Projects
               </a>
             </li>
             <li>
@@ -594,6 +611,17 @@ const HeroSection = () => {
     }}
   >
     <h1 style={{ fontSize: "3rem", lineHeight: "1" }}>STRUCPROOF</h1>
+    <p
+  style={{
+    fontSize: "1.2rem",
+    lineHeight: "1.8",
+    
+    paddingLeft: "180px", // Adjust spacing here
+  }}
+>
+  By Rasankar & Sons
+</p>
+
 <p style={{ fontSize: "2rem", lineHeight: "2" }}>
   {/* Building Waterproofing & Consultant */}
   BUILDING WATERPROFFING & CONSULTANT
