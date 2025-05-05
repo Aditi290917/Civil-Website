@@ -394,7 +394,7 @@ const ProjectCards = () => {
 
     const projects = [
         {
-            title: 'Projects',
+            title: 'High-Rise Waterproofing – Pune (25,000 sq. ft.)',
             description: 'Residential | New Build',
             image: 'WP1.jpg',
             gallery: [
@@ -404,7 +404,7 @@ const ProjectCards = () => {
             ],
         },
         {
-            title: 'Projects',
+            title: 'Swimming Pool Protection – Karad Sports Club',
             description: 'Residential | New Build',
             image: 'WP2.jpg',
             gallery: [
@@ -413,13 +413,22 @@ const ProjectCards = () => {
             ],
         },
         {
-            title: 'Projects',
+            title: 'Industrial Shed Sealing – MIDC Satara',
             description: 'Residential | New Build',
             image: 'WP3.jpg',
             gallery: [
                 'rubber_gallery1.jpg',
                 'rubber_gallery2.jpg',
                 'rubber_gallery3.jpg',
+            ],
+        },
+        {
+            title: 'Water Tank Reinforcement – Government Hospital, Sangli',
+            description: 'Residential | New Build',
+            image: 'WP4.jpg', // Placeholder image, replace with actual image
+            gallery: [
+                'water_tank_gallery1.jpg',
+                'water_tank_gallery2.jpg',
             ],
         },
     ];
@@ -441,67 +450,149 @@ const ProjectCards = () => {
         <>
             <h1 id="projects" className="text-center my-4">Our Projects</h1>
 
-            <div className="d-flex justify-content-center flex-wrap gap-4 p-4">
-                {projects.map((project, index) => (
-                    <div
-                        key={index}
-                        className="card border-0 shadow-lg rounded overflow-hidden"
-                        style={{
-                            width: '24rem',
-                            transition: 'transform 0.3s ease',
-                            position: 'relative',
-                        }}
-                        onMouseEnter={(e) => {
-                            const cardBody = e.currentTarget.querySelector('.card-body');
-                            cardBody.style.height = '10rem';
-                            cardBody.querySelector('button').style.opacity = '1'; // Make button fully visible
-                        }}
-                        onMouseLeave={(e) => {
-                            const cardBody = e.currentTarget.querySelector('.card-body');
-                            cardBody.style.height = '6rem';
-                            cardBody.querySelector('button').style.opacity = '0'; // Hide button
-                        }}
-                    >
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="card-img-top"
-                            style={{
-                                height: '24rem',
-                                objectFit: 'cover',
-                                borderRadius: '8px 8px 0 0',
-                            }}
-                        />
+            <div 
+                className="text-center" 
+               
+            >
+                <h2 className="fw-bold text-primary mb-3">Proven Work. Proven Trust.</h2>
+                <p className="fs-5 text-secondary mb-4">We’ve executed <span style={{ fontWeight: 'bold', color: '#FF5733' }}>1500+</span> projects for:</p>
+                <ul className="list-unstyled fs-6 text-dark" style={{ lineHeight: '2', margin: '0 auto', maxWidth: '600px' }}>
+                    <li>• Residential Buildings & Societies</li>
+                    <li>• Commercial Complexes & Offices</li>
+                    <li>• Government Institutions</li>
+                    <li>• Factories, Warehouses & Industrial Plants</li>
+                    <li>• Private Bungalows & Villas</li>
+                </ul>
+            </div>
+
+            <div className="container">
+                {/* Top two projects */}
+                <div className="d-flex justify-content-center flex-wrap gap-4 p-4 mb-5">
+                    {projects.slice(0, 2).map((project, index) => (
                         <div
-                            className="card-body position-absolute bottom-0 start-0 w-100 bg-white p-3 text-center"
+                            key={index}
+                            className="card border-0 shadow-lg rounded overflow-hidden"
                             style={{
-                                height: '6rem',
-                                transition: 'height 0.3s ease',
-                                borderTop: '2px solid #f0f0f0',
+                                width: '24rem',
+                                transition: 'transform 0.3s ease',
+                                position: 'relative',
+                            }}
+                            onMouseEnter={(e) => {
+                                const cardBody = e.currentTarget.querySelector('.card-body');
+                                cardBody.style.height = '12rem';
+                                cardBody.querySelector('button').style.opacity = '1'; // Make button fully visible
+                            }}
+                            onMouseLeave={(e) => {
+                                const cardBody = e.currentTarget.querySelector('.card-body');
+                                cardBody.style.height = '8rem';
+                                cardBody.querySelector('button').style.opacity = '0'; // Hide button
                             }}
                         >
-                            <h5 className="text-dark mb-1">{project.title}</h5>
-                            <p className="text-muted mb-2 small">{project.description}</p>
-                            <button
-                                onClick={() => navigate(`/projects`)}
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="card-img-top"
                                 style={{
-                                    opacity: 0, // Initially hidden
-                                    backgroundColor: "#FF5733",
-                                    color: "#fff",
-                                    border: "none",
-                                    padding: "10px 20px",
-                                    fontSize: "1rem",
-                                    cursor: "pointer",
-                                    borderRadius: "5px",
-                                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
-                                    transition: "opacity 0.3s ease, background-color 0.3s ease",
+                                    height: '24rem',
+                                    objectFit: 'cover',
+                                    borderRadius: '8px 8px 0 0',
+                                }}
+                            />
+                            <div
+                                className="card-body position-absolute bottom-0 start-0 w-100 bg-white p-3 text-center"
+                                style={{
+                                    height: '8rem',
+                                    transition: 'height 0.3s ease',
+                                    borderTop: '2px solid #f0f0f0',
                                 }}
                             >
-                                View Project
-                            </button>
+                                <h5 className="text-dark mb-3">{project.title}</h5>
+                                <p className="text-muted mb-2 small">{project.description}</p>
+                                <button
+                                    onClick={() => navigate(`/projects`)}
+                                    style={{
+                                        opacity: 0, // Initially hidden
+                                        backgroundColor: "#FF5733",
+                                        color: "#fff",
+                                        border: "none",
+                                        padding: "10px 20px",
+                                        fontSize: "1rem",
+                                        cursor: "pointer",
+                                        borderRadius: "5px",
+                                        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+                                        transition: "opacity 0.3s ease, background-color 0.3s ease",
+                                    }}
+                                >
+                                    View Project
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+
+                {/* Bottom two projects */}
+                <div className="d-flex justify-content-center flex-wrap gap-4 p-4">
+                    {projects.slice(2, 4).map((project, index) => (
+                        <div
+                            key={index}
+                            className="card border-0 shadow-lg rounded overflow-hidden"
+                            style={{
+                                width: '24rem',
+                                transition: 'transform 0.3s ease',
+                                position: 'relative',
+                            }}
+                            onMouseEnter={(e) => {
+                                const cardBody = e.currentTarget.querySelector('.card-body');
+                                cardBody.style.height = '12rem';
+                                cardBody.querySelector('button').style.opacity = '1'; // Make button fully visible
+                            }}
+                            onMouseLeave={(e) => {
+                                const cardBody = e.currentTarget.querySelector('.card-body');
+                                cardBody.style.height = '8rem';
+                                cardBody.querySelector('button').style.opacity = '0'; // Hide button
+                            }}
+                        >
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="card-img-top"
+                                style={{
+                                    height: '24rem',
+                                    objectFit: 'cover',
+                                    borderRadius: '8px 8px 0 0',
+                                }}
+                            />
+                            <div
+                                className="card-body position-absolute bottom-0 start-0 w-100 bg-white p-3 text-center"
+                                style={{
+                                    height: '8rem',
+                                    transition: 'height 0.3s ease',
+                                    borderTop: '2px solid #f0f0f0',
+                                }}
+                            >
+                                <h5 className="text-dark mb-3">{project.title}</h5>
+                                <p className="text-muted mb-2 small">{project.description}</p>
+                                <button
+                                    onClick={() => navigate(`/projects`)}
+                                    style={{
+                                        opacity: 0, // Initially hidden
+                                        backgroundColor: "#FF5733",
+                                        color: "#fff",
+                                        border: "none",
+                                        padding: "10px 20px",
+                                        fontSize: "1rem",
+                                        cursor: "pointer",
+                                        borderRadius: "5px",
+                                        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+                                        transition: "opacity 0.3s ease, background-color 0.3s ease",
+                                    }}
+                                >
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {activeProject && (

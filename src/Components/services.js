@@ -391,6 +391,193 @@
 // document.head.appendChild(style);
 
 // export default Services;
+// import React from "react";
+// import { motion } from "framer-motion";
+// import {
+//   FaWater,
+//   FaBath,
+//   FaBuilding,
+//   FaPaintRoller,
+//   FaShieldAlt,
+//   FaTools,
+// } from "react-icons/fa";
+
+// const ServiceCard = ({ title, Icon, iconColor, index }) => {
+//   return (
+// <motion.div
+//       initial={{ opacity: 0, y: 50 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       viewport={{ once: true, amount: 0.2 }}
+//       transition={{
+//         duration: 0.5,
+//         delay: index * 0.2,
+//       }}
+//       style={{
+//         width: "180px",
+//         height: "150px",
+//         borderRadius: "15px",
+//         background: `linear-gradient(
+//           90deg,
+//           rgba(255, 182, 193, 0.8),
+//           rgba(173, 216, 230, 0.8),
+//           rgba(144, 238, 144, 0.8),
+//           rgba(255, 239, 213, 0.8),
+//           rgba(221, 160, 221, 0.8)
+//         )`,
+//         backgroundSize: "300% 300%",
+//         animation: "gradientMove 3s linear infinite",
+//         padding: "3px",
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//       }}
+//     >
+//       <div
+//         style={{
+//           width: "100%",
+//           height: "100%",
+//           backgroundColor: "#fff",
+//           borderRadius: "12px",
+//           display: "flex",
+//           flexDirection: "column",
+//           justifyContent: "center",
+//           alignItems: "center",
+//           textAlign: "center",
+//           fontWeight: "bold",
+//           fontSize: "18px",
+//         }}
+//       >
+//         <Icon size={35} style={{ marginBottom: "8px", color: iconColor }} />
+//         {title}
+//       </div>
+//     </motion.div>
+//   );
+// };
+
+// const Services = () => {
+//   const serviceData = [
+//     { title: "Roof Waterproofing", Icon: FaWater, color: "#1E90FF" },
+//     { title: "W.C. & Bathroom Waterproofing", Icon: FaBath, color: "#FF69B4" },
+//     { title: "Basement Waterproofing", Icon: FaBuilding, color: "#8B4513" },
+//     { title: "Wall Waterproofing", Icon: FaPaintRoller, color: "#20B2AA" },
+//     { title: "Foundation Waterproofing", Icon: FaShieldAlt, color: "#FFD700" },
+//     { title: "Leak Detection and Repair", Icon: FaTools, color: "#DC143C" },
+//   ];
+
+//   return (
+
+//     <div
+//     id="services"
+//     style={{
+//       width: "100%",
+//         maxWidth: "1200px",
+//         margin: "50px auto",
+//         display: "flex",
+//         flexDirection: "column",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         gap: "20px",
+
+//     }}>
+//     <div
+      
+//       style={{
+//         width: "100%",
+//         maxWidth: "850px",
+//         margin: "50px auto",
+//         display: "flex",
+//         flexDirection: "column",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         gap: "20px",
+//       }}
+//     >
+//       <motion.h2
+//         initial={{ opacity: 0, y: 50 }}
+//         whileInView={{ opacity: 1, y: 0 }}
+//         viewport={{ once: true, amount: 0.5 }}
+//         transition={{ duration: 0.7 }}
+//         style={{
+//           width: "100%",
+//           textAlign: "center",
+//           fontSize: "28px",
+//           fontWeight: "bold",
+//           color: "#333",
+//         }}
+//       >
+//         Our Services
+//       </motion.h2>
+
+//       <motion.div
+//         initial={{ scale: 0 }}
+//         whileInView={{ scale: 1 }}
+//         viewport={{ once: true, amount: 0.3 }}
+//         transition={{ duration: 0.6, ease: "easeOut" }}
+//         style={{
+//           width: "150px",
+//           height: "150px",
+//           backgroundColor: "#fff",
+//           border: "3px solid rgba(0, 123, 255, 0.5)",
+//           borderRadius: "20%",
+//           display: "flex",
+//           justifyContent: "center",
+//           alignItems: "center",
+//           textAlign: "center",
+//           fontWeight: "bold",
+//           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+//         }}
+//       >
+//         <div>
+//           <img
+//             src="Logo.png"
+//             alt="Logo"
+//             style={{
+//               width: "60px",
+//               height: "60px",
+//               marginBottom: "10px",
+//             }}
+//           />
+//           <p style={{ margin: "0", fontSize: "18px", color: "rgba(0, 123, 255, 0.8)" }}>
+//             StrucProof
+//           </p>
+//         </div>
+//       </motion.div>
+
+//       <div
+//         style={{
+//           display: "flex",
+//           flexWrap: "wrap",
+//           gap: "20px",
+//           justifyContent: "center",
+//         }}
+//       >
+//         {serviceData.map((service, index) => (
+//           <ServiceCard
+//             key={index}
+//             title={service.title}
+//             Icon={service.Icon}
+//             iconColor={service.color}
+//             index={index}
+//           />
+//         ))}
+//       </div>
+
+//       {/* New Layout Section */}
+     
+
+//     </div>
+
+   
+
+
+//     </div>
+
+    
+    
+//   );
+// };
+
+// export default Services;
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -399,12 +586,14 @@ import {
   FaBuilding,
   FaPaintRoller,
   FaShieldAlt,
-  FaTools,
+  FaHammer,
+  FaIndustry,
+  FaWrench,
 } from "react-icons/fa";
 
 const ServiceCard = ({ title, Icon, iconColor, index }) => {
   return (
-<motion.div
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -413,8 +602,8 @@ const ServiceCard = ({ title, Icon, iconColor, index }) => {
         delay: index * 0.2,
       }}
       style={{
-        width: "180px",
-        height: "150px",
+        width: "220px", 
+        height: "180px",
         borderRadius: "15px",
         background: `linear-gradient(
           90deg,
@@ -456,34 +645,23 @@ const ServiceCard = ({ title, Icon, iconColor, index }) => {
 
 const Services = () => {
   const serviceData = [
-    { title: "Roof Waterproofing", Icon: FaWater, color: "#1E90FF" },
-    { title: "W.C. & Bathroom Waterproofing", Icon: FaBath, color: "#FF69B4" },
-    { title: "Basement Waterproofing", Icon: FaBuilding, color: "#8B4513" },
-    { title: "Wall Waterproofing", Icon: FaPaintRoller, color: "#20B2AA" },
-    { title: "Foundation Waterproofing", Icon: FaShieldAlt, color: "#FFD700" },
-    { title: "Leak Detection and Repair", Icon: FaTools, color: "#DC143C" },
+    { title: "Terrace & Roof Waterproofing (Rubber Coat, Brick Bat Coba)", Icon: FaWater, color: "#1E90FF" },
+    { title: "Basement, Footing & Foundation Waterproofing", Icon: FaBuilding, color: "#8A2BE2" },
+    { title: "W.C & Bathroom Waterproofing", Icon: FaBath, color: "#FF69B4" },
+    { title: "Balcony & Exterior Wall Waterproofing", Icon: FaPaintRoller, color: "#32CD32" },
+    { title: "Swimming Pool & Water Tanks Waterproofing", Icon: FaShieldAlt, color: "#FFD700" },
+    { title: "Tile & Deck Surface Waterproofing", Icon: FaHammer, color: "#FF4500" },
+    { title: "Industrial Shed & Factory Protection Waterproofing", Icon: FaIndustry, color: "#8B0000" },
+    { title: "Grouting, Crack Filling & Structural Repairs", Icon: FaWrench, color: "#4682B4" },
+    { title: "Chemical Coating & Custom Protective Layers", Icon: FaShieldAlt, color: "#FF8C00" },
   ];
-
+  
   return (
-
     <div
-    id="services"
-    style={{
-      width: "100%",
-        maxWidth: "1200px",
-        margin: "50px auto",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "20px",
-
-    }}>
-    <div
-      
+      id="services"
       style={{
         width: "100%",
-        maxWidth: "850px",
+        maxWidth: "1000px",
         margin: "50px auto",
         display: "flex",
         flexDirection: "column",
@@ -492,7 +670,20 @@ const Services = () => {
         gap: "20px",
       }}
     >
-      <motion.h2
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "1200px",
+          margin: "50px auto",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "20px",
+        }}
+      >
+
+<motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -507,73 +698,77 @@ const Services = () => {
       >
         Our Services
       </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.7 }}
+          style={{
+            width: "100%",
+            textAlign: "center",
+            fontSize: "1.5vw", // Responsive font size based on screen width
+            fontWeight: "bold",
+            color: "#333",
+          }}
+        >
+          Comprehensive Waterproofing & Repair Solutions
+        </motion.h2>
 
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        style={{
-          width: "150px",
-          height: "150px",
-          backgroundColor: "#fff",
-          border: "3px solid rgba(0, 123, 255, 0.5)",
-          borderRadius: "20%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          fontWeight: "bold",
-          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-        }}
-      >
-        <div>
-          <img
-            src="Logo.png"
-            alt="Logo"
-            style={{
-              width: "60px",
-              height: "60px",
-              marginBottom: "10px",
-            }}
-          />
-          <p style={{ margin: "0", fontSize: "18px", color: "rgba(0, 123, 255, 0.8)" }}>
-            StrucProof
-          </p>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          style={{
+            width: "150px",
+            height: "150px",
+            backgroundColor: "#fff",
+            border: "3px solid rgba(0, 123, 255, 0.5)",
+            borderRadius: "20%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            fontWeight: "bold",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+          }}
+        >
+          <div>
+            <img
+              src="Logo.png"
+              alt="Logo"
+              style={{
+                width: "60px",
+                height: "60px",
+                marginBottom: "10px",
+              }}
+            />
+            <p style={{ margin: "0", fontSize: "18px", color: "rgba(0, 123, 255, 0.8)" }}>
+              StrucProof
+            </p>
+          </div>
+        </motion.div>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "20px",
+            justifyContent: "center",
+          }}
+        >
+          {serviceData.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              Icon={service.Icon}
+              iconColor={service.color}
+              index={index}
+            />
+          ))}
         </div>
-      </motion.div>
-
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "20px",
-          justifyContent: "center",
-        }}
-      >
-        {serviceData.map((service, index) => (
-          <ServiceCard
-            key={index}
-            title={service.title}
-            Icon={service.Icon}
-            iconColor={service.color}
-            index={index}
-          />
-        ))}
       </div>
-
-      {/* New Layout Section */}
-     
-
     </div>
-
-   
-
-
-    </div>
-
-    
-    
   );
 };
 

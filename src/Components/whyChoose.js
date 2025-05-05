@@ -1,44 +1,16 @@
 import React from "react";
-import { Row, Col, Container } from "reactstrap";
-import { FaUsers, FaTools, FaTag, FaHeadset, FaShieldAlt } from "react-icons/fa";
+import { Container } from "reactstrap";
 
 const WhyChoose = () => {
-  const cards = [
-    {
-      title: "Experienced & Skilled Team",
-      description:
-        "Our team is highly experienced and skilled in providing top-notch solutions.",
-      icon: <FaUsers />,
-      backgroundColor: "#007bff",
-    },
-    {
-      title: "Quality Materials & Workmanship",
-      description:
-        "We use the best materials and deliver unmatched craftsmanship for every project.",
-      icon: <FaTools />,
-      backgroundColor: "#28a745",
-    },
-    {
-      title: "Competitive Pricing",
-      description:
-        "We provide cost-effective solutions without compromising on quality.",
-      icon: <FaTag />,
-      backgroundColor: "#ffc107",
-    },
-    {
-      title: "Excellent Customer Service",
-      description:
-        "We prioritize our customers and ensure excellent support every step of the way.",
-      icon: <FaHeadset />,
-      backgroundColor: "#17a2b8",
-    },
-    {
-      title: "10 Years Warranty",
-      description:
-        "We offer a 10-year warranty to ensure peace of mind and long-term reliability.",
-      icon: <FaShieldAlt />,
-      backgroundColor: "#6f42c1",
-    },
+  const reasons = [
+    { title: "35+ Years of Real Experience", icon: "📅" },
+    { title: "1500+ Projects Done Right", icon: "🏗️" },
+    { title: "10-Year Warranty on All Work", icon: "🔒" },
+    { title: "Site-Specific Engineering", icon: "📐" },
+    { title: "Trusted by Builders, Govt., and Businesses", icon: "🤝" },
+    { title: "Fully Equipped Teams & Modern Tools", icon: "🛠️" },
+    { title: "Affordable Pricing with No Compromise", icon: "💰" },
+    { title: "Family Values + Professional Execution", icon: "❤️" },
   ];
 
   return (
@@ -46,7 +18,7 @@ const WhyChoose = () => {
       className="why-choose-us-section"
       style={{
         padding: "4rem 1rem",
-        background: "linear-gradient(135deg, #e0f7fa, #f9f9f9)",
+        backgroundColor: "#f1f5f9",
       }}
     >
       <Container>
@@ -54,86 +26,74 @@ const WhyChoose = () => {
           className="text-center mb-5"
           style={{
             fontWeight: "700",
-            color: "#333",
-            letterSpacing: "0.5px",
+            color: "#1a202c",
+            fontSize: "2.5rem",
+            textTransform: "uppercase",
           }}
         >
-          Why Choose Us
+          Why Choose StrucProof?
         </h2>
-        <Row className="justify-content-center"
-        style={{ gap: "2rem" }}>
-          {cards.map((item, index) => (
-            <Col
-              lg="3"
-              md="6"
-              sm="12"
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          {reasons.map((reason, index) => (
+            <div
               key={index}
-              className="d-flex justify-content-center mb-4"
+              style={{
+                backgroundColor: "#fff",
+                padding: "2rem",
+                borderRadius: "12px",
+                textAlign: "center",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-8px)";
+                e.currentTarget.style.boxShadow =
+                  "0 8px 25px rgba(0, 0, 0, 0.2)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 4px 15px rgba(0, 0, 0, 0.1)";
+              }}
             >
               <div
                 style={{
-                  width: "100%",
-                  maxWidth: "300px",
-                  minHeight: "320px", // Fixed card height
-                  padding: "25px",
-                  backgroundColor: "#fff",
-                  borderRadius: "16px",
-                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
-                  textAlign: "center",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  fontSize: "3rem",
+                  marginBottom: "1rem",
+                  color: index % 2 === 0 ? "#1E90FF" : "#FF69B4",
                 }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "scale(1.05)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "scale(1)")
-                }
               >
-                <div
-                  style={{
-                    width: "90px",
-                    height: "90px",
-                    backgroundColor: item.backgroundColor,
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 20px",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "2.8rem",
-                      color: "#fff",
-                    }}
-                  >
-                    {item.icon}
-                  </div>
-                </div>
-                <h3
-                  style={{
-                    fontWeight: "600",
-                    marginBottom: "15px",
-                    color: "#333",
-                    fontSize: "1.3rem", // Reduced title size
-                  }}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  style={{
-                    color: "#555",
-                    fontSize: "0.95rem",
-                    lineHeight: "1.6",
-                    margin: 0,
-                  }}
-                >
-                  {item.description}
-                </p>
+                {reason.icon}
               </div>
-            </Col>
+              <h4
+                style={{
+                  fontWeight: "600",
+                  color: "#333",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                {reason.title}
+              </h4>
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#666",
+                }}
+              >
+                {index % 2 === 0
+                  ? "Innovating excellence for decades."
+                  : "Quality and trust you can rely on."}
+              </p>
+            </div>
           ))}
-        </Row>
+        </div>
       </Container>
     </div>
   );
