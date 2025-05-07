@@ -98,7 +98,7 @@ const FAQ = () => {
                   alignItems: "center",
                   cursor: "pointer",
                   color: "#333",
-                  fontWeight: "bold",
+                  // fontWeight: "bold",
                   fontSize: "1.25rem",
                 }}
                 onClick={() => toggleQuestion(item.id)}
