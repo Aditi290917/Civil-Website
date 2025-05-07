@@ -3,14 +3,14 @@ import { Container } from "reactstrap";
 
 const WhyChoose = () => {
   const reasons = [
-    { title: "35+ Years of Real Experience", icon: "📅" },
-    { title: "1500+ Projects Done Right", icon: "🏗️" },
-    { title: "10-Year Warranty on All Work", icon: "🔒" },
-    { title: "Site-Specific Engineering", icon: "📐" },
-    { title: "Trusted by Builders, Govt., and Businesses", icon: "🤝" },
-    { title: "Fully Equipped Teams & Modern Tools", icon: "🛠️" },
-    { title: "Affordable Pricing with No Compromise", icon: "💰" },
-    { title: "Family Values + Professional Execution", icon: "❤️" },
+    "35+ Years of Real Experience",
+    "1500+ Projects Done Right",
+    "10-Year Warranty on All Work",
+    "Site-Specific Engineering",
+    "Trusted by Builders, Govt., and Businesses",
+    "Fully Equipped Teams & Modern Tools",
+    "Affordable Pricing with No Compromise",
+    "Family Values + Professional Execution",
   ];
 
   return (
@@ -18,7 +18,7 @@ const WhyChoose = () => {
       className="why-choose-us-section"
       style={{
         padding: "4rem 1rem",
-        backgroundColor: "#f1f5f9",
+        backgroundColor: "#f8fafc",
       }}
     >
       <Container>
@@ -26,9 +26,10 @@ const WhyChoose = () => {
           className="text-center mb-5"
           style={{
             fontWeight: "700",
-            color: "#1a202c",
-            fontSize: "2.5rem",
+            color: "#1f2937",
+            fontSize: "2rem",
             textTransform: "uppercase",
+            letterSpacing: "1px",
           }}
         >
           Why Choose StrucProof?
@@ -38,58 +39,51 @@ const WhyChoose = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "1.5rem",
+            gap: "2rem",
           }}
         >
           {reasons.map((reason, index) => (
             <div
               key={index}
               style={{
-                backgroundColor: "#fff",
+                backgroundColor: "#ffffff",
                 padding: "2rem",
                 borderRadius: "12px",
                 textAlign: "center",
-                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.05)",
+                border: "1px solid #e5e7eb",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-8px)";
+                e.currentTarget.style.transform = "translateY(-5px)";
                 e.currentTarget.style.boxShadow =
-                  "0 8px 25px rgba(0, 0, 0, 0.2)";
+                  "0 8px 20px rgba(0, 0, 0, 0.1)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow =
-                  "0 4px 15px rgba(0, 0, 0, 0.1)";
+                  "0 4px 15px rgba(0, 0, 0, 0.05)";
               }}
             >
-              <div
-                style={{
-                  fontSize: "3rem",
-                  marginBottom: "1rem",
-                  color: index % 2 === 0 ? "#1E90FF" : "#FF69B4",
-                }}
-              >
-                {reason.icon}
-              </div>
               <h4
                 style={{
                   fontWeight: "600",
-                  color: "#333",
-                  marginBottom: "0.5rem",
+                  color: "#111827",
+                  marginBottom: "1rem",
+                  fontSize: "1.2rem",
                 }}
               >
-                {reason.title}
+                {reason}
               </h4>
               <p
                 style={{
                   fontSize: "0.9rem",
-                  color: "#666",
+                  color: "#6b7280",
                 }}
               >
                 {index % 2 === 0
-                  ? "Innovating excellence for decades."
-                  : "Quality and trust you can rely on."}
+                  ? "Delivering unparalleled expertise and reliability."
+                  : "Built on trust, quality, and innovation."}
               </p>
             </div>
           ))}
